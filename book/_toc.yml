@@ -4,6 +4,7 @@ root: intro.md
 parts:
   - caption: Contents
     chapters:
+    - file: some_content/ipyquiz.ipynb
     - file: some_content/overview.md
       sections:
       - file: some_content/text_and_code.ipynb
