@@ -6,6 +6,7 @@ parts:
     chapters:
     - file: some_content/ipyquiz.ipynb
     - file: some_content/overview.md
+    - file: some_content/demo.ipynb
     - file: some_content/example_dynamical_system_simulation.ipynb
       sections:
       - file: some_content/text_and_code.ipynb
