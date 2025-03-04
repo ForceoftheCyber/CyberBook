@@ -7,7 +7,7 @@ sphinx-exercise
 teachbooks-sphinx-tippy
 ipywidgets
 jupyterquiz
-ipyquiz @ git+https://github.com/ForceoftheCyber/ipyquiz.git
+ipyquizjb @ git+https://github.com/ForceoftheCyber/ipyquiz.git
 micropip
 
 # now list the packages (and the respective url) you wish to download from the GitLab package registry
