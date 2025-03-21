@@ -4,10 +4,6 @@ on:
   push:
     branches:
     - '**'
-    # If your git repository has the Jupyter Book within some-subfolder next to
-    # unrelated files, you can make this run only if a file within that specific
-    # folder (or the workflow file itself) has been modified.
-    #
     paths:
     - book/**
     - requirements.txt
@@ -22,4 +18,13 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    steps:
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
 
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+      
+      # Add other steps as needed
