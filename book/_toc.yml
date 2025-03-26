@@ -2,7 +2,7 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: Assignment 1
+  - caption: PID Control
     numbered: True
     chapters:
     - file: chapters/pid_control/intro.md
