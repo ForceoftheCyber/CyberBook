@@ -13,5 +13,5 @@ parts:
       - file: chapters/pid_control/metacognition_and_reflection.ipynb
     
     - file: references.md
-    - file: changelog.md
-    - file: credits.md
+    # - file: changelog.md
+    # - file: credits.md
