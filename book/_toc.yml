@@ -2,22 +2,16 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: Contents
+  - caption: PID Control
+    numbered: True
     chapters:
-    - file: some_content/ipyquiz.ipynb
-    - file: some_content/overview.md
-    - file: some_content/example_dynamical_system_simulation.ipynb
+    - file: chapters/pid_control/intro.md
       sections:
-      - file: some_content/text_and_code.ipynb
-    - file: exercises
-      sections:
-      - file: exercises/001.md
-      - file: exercises/002.md
-      - file: exercises/003.md
-      - file: exercises/004.md
-      - file: exercises/005.md
-      - file: exercises/006.md
-      - file: exercises/summary
+      - file: chapters/pid_control/aligning_expectations.ipynb
+      - file: chapters/pid_control/checking_prerequisite_knowledge.ipynb
+      - file: chapters/pid_control/working_towards_the_ilos_of_this_section.ipynb
+      - file: chapters/pid_control/metacognition_and_reflection.ipynb
+    
     - file: references.md
-    - file: changelog.md
-    - file: credits.md
+    # - file: changelog.md
+    # - file: credits.md
