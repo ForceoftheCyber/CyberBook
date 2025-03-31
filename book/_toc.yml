@@ -11,6 +11,7 @@ parts:
       - file: chapters/pid_control/checking_prerequisite_knowledge.ipynb
       - file: chapters/pid_control/working_towards_the_ilos_of_this_section.ipynb
       - file: chapters/pid_control/metacognition_and_reflection.ipynb
+    - file: chapters/simulator/maglev_dynamical_system_simulation.ipynb
     
     - file: references.md
     # - file: changelog.md
