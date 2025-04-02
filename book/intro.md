@@ -1,5 +1,3 @@
-# Maglev Example Assignment
+# Maglev Interactive Notebook
 
-
-This is a test for example 
 
