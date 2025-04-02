@@ -7,6 +7,7 @@ sphinx-exercise
 teachbooks-sphinx-tippy
 ipywidgets
 ipyquizjb
+ipysim
 micropip
 
 git+https://github.com/TeachBooks/Sphinx-Thebe
