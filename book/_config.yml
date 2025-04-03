@@ -37,6 +37,9 @@ sphinx:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
       }
+    mathjax2_config:
+      loader:
+        load: ["output/CommonHTML"]
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
