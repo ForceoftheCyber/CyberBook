@@ -2,12 +2,26 @@ import re
 import time
 from playwright.sync_api import Page, expect, sync_playwright
 import pytest
+import subprocess
 
-# Test to find page title, this pretty much checks if you are able to access the page
+# starts Teachbooks on localhost port 8000
+
+
+@pytest.fixture(scope="session", autouse=True)
+def run_server():
+    server = subprocess.Popen(
+        ["python", "-m", "http.server", "8000", "--directory", "book/_build/html"])
+    print("Server started")
+
+    yield
+
+    server.terminate()
+    server.wait()
+    print("Server stopped")
+
 
 # Uncomment this if you want visual feedback in browser, this significantly slows down the testing
 # even if run in headless mode
-
 
 @pytest.fixture
 def page(slow_mo: int = 500):
@@ -60,9 +74,9 @@ def test_answering_wrong(page: Page):
     expect(page.locator('pre:has-text("Wrong answer!")').nth(0)).to_be_visible()
     expect(page.locator('pre:has-text("Wrong answer!")').nth(1)).to_be_visible()
 
-    #This is going to be changed shortly as of time of writing so can't check it now
-    #expect(page.locator(
-     #   'strong:has-text("[Will expand on wrong answer]")')).to_be_visible()
+    # This is going to be changed shortly as of time of writing so can't check it now
+    # expect(page.locator(
+    #   'strong:has-text("[Will expand on wrong answer]")')).to_be_visible()
 
 # Test button try again with new questions (Theese test do not really check everything, just checks
 # that check answer reapears)
@@ -79,7 +93,8 @@ def test_try_again_with_new_questions(page: Page):
     page.get_by_role("button", name="Check answer").click()
     time.sleep(2)
 
-#Test answering correct
+# Test answering correct
+
 
 def test_answering_correct(page: Page):
     page.goto(
@@ -89,7 +104,7 @@ def test_answering_correct(page: Page):
     page.get_by_role("button", name="Check answer").click()
 
     expect(page.locator(
-            'pre:has-text("All questions are correctly answered! You may now proceed.")')).to_be_visible()
-    
+        'pre:has-text("All questions are correctly answered! You may now proceed.")')).to_be_visible()
+
     expect(page.locator('pre:has-text("Correct!")').nth(0)).to_be_visible()
     expect(page.locator('pre:has-text("Correct!")').nth(1)).to_be_visible()
