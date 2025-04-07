@@ -1,0 +1,9 @@
+format: jb-book
+root: intro.md
+
+parts:
+  - caption: PID Control
+    numbered: True
+    chapters:
+    - file: checking_prerequisite_knowledge.ipynb
+    - file: maglev_dynamical_system_simulation.ipynb

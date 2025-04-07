@@ -22,7 +22,7 @@ def test_wrong_simulator_parameters(page: Page):
     page.set_default_navigation_timeout(70000)
     page.set_default_timeout(70000)
     page.goto(
-        "http://localhost:8000/chapters/simulator/maglev_dynamical_system_simulation.html")
+        "http://localhost:8000/maglev_dynamical_system_simulation.html")
 
     # Set Kp slider value to 20 which equals style transform translate(-1000%)
     # slider1 = page.locator('div.noUi-handle noUi-handle-lower')
@@ -62,7 +62,7 @@ def test_wrong_simulator_parameters(page: Page):
 
 def test_valid_simulator_parameters(page: Page):
     page.goto(
-        "http://localhost:8000/chapters/simulator/maglev_dynamical_system_simulation.html")
+        "http://localhost:8000/maglev_dynamical_system_simulation.html")
     
     slider1 = page.locator('div.noUi-handle.noUi-handle-lower').nth(0)
     slider2 = page.locator('div.noUi-handle.noUi-handle-lower').nth(1)
