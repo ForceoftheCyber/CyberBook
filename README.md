@@ -23,3 +23,16 @@ teachbooks build book
 teachbooks serve
 ```
 This will provide you with a link to open up the built book in a browser.
+
+## Running tests
+
+### Install extra requirements
+
+```bash
+python -m pip install -r devreq.txt
+```
+
+### Run tests
+```bash
+python -m pytest .\PlayWrightTest\
+```

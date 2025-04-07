@@ -1,0 +1,118 @@
+import os
+import re
+import time
+from playwright.sync_api import Page, expect, sync_playwright
+import pytest
+import subprocess
+
+
+@pytest.fixture
+def page(slow_mo: int = 500):
+    """ 
+    Leave this function uncommented if you want visual feedback in browser,
+    this significantly slows down the testing even if run in headless mode
+    If commented, the test will run in headless mode 
+    """
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False, slow_mo=slow_mo)
+        context = browser.new_context()
+        _page = context.new_page()
+        yield _page
+        _page.close()
+        context.close()
+        browser.close()
+
+
+@pytest.fixture(scope="session", autouse=True)
+def run_server():
+    """
+    Builds the book and starts the book on localhost port 8000
+    """
+    if not os.path.exists("./PlayWrightTest/testbook/_build"):
+        print("Build started")
+        build_process = subprocess.Popen(["teachbooks", "build", "./PlayWrightTest/testbook"])  # Build book
+        build_process.wait()
+        print("Build finished")
+
+    server = subprocess.Popen(
+        ["python", "-m", "http.server", "8000", "--directory", "./PlayWrightTest/testbook/_build/html"])
+    print("Server started")
+    yield
+    server.terminate()
+    server.wait()
+    print("Server stopped")
+
+
+def test_has_title(page: Page):
+    page.goto("http://localhost:8000/intro.html")
+    expect(page).to_have_title(re.compile("P"))
+
+    # This is just to pause it a bit at the end so you get some time to view
+    page.evaluate("() => Promise.resolve()")
+
+
+def test_checking_prerequisite_knowledge_from_pid_intro(page: Page):
+    """
+    Tests going to a chapter from the intro chapter
+    """
+    page.goto("http://localhost:8000/intro.html")
+
+    page.get_by_role("article").get_by_role(
+        "link", name="Checking prerequisite knowledge").click()
+    expect(page.get_by_role(
+        "heading", name="Checking Prerequisite Knowledge")).to_be_visible()
+
+    page.evaluate("() => Promise.resolve()")
+
+
+def test_answering_wrong(page: Page):
+    """
+    Tests answering the first option in the two questions, in this case you will get a wrong result
+    """
+    page.goto(
+        "http://localhost:8000/checking_prerequisite_knowledge.html")
+
+    page.get_by_role("button", name="Proportional component").click()
+    page.get_by_role("button", name="Increased steady-state error").click()
+    time.sleep(1)
+    page.get_by_role("button", name="Check answer").click()
+    time.sleep(2)
+
+    # Finds and checks for wrong questions
+    expect(page.locator(
+        'pre:has-text("Wrong! No questions are correctly answered")')).to_be_visible()
+    expect(page.locator('pre:has-text("Wrong answer!")').nth(0)).to_be_visible()
+    expect(page.locator('pre:has-text("Wrong answer!")').nth(1)).to_be_visible()
+
+    # Checks if additional materila expanded
+    expect(page.get_by_text("A PID controller consists of three key components")).to_be_visible()
+
+
+def test_try_again_with_new_questions(page: Page):
+    """
+    Test button try again with new questions (These tests do not really check everything, just checks
+    that check answer reappears)
+    """
+    page.goto(
+        "http://localhost:8000/checking_prerequisite_knowledge.html")
+    page.get_by_role("button", name="Proportional component").click()
+    page.get_by_role("button", name="Increased steady-state error").click()
+    page.get_by_role("button", name="Check answer").click()
+
+    page.get_by_role("button", name="Try again with new questions").click()
+    page.get_by_role("button", name="Check answer").click()
+    time.sleep(2)
+
+
+def test_answering_correct(page: Page):
+    page.goto(
+        "http://localhost:8000/checking_prerequisite_knowledge.html")
+    page.get_by_role("button", name="Increased system oscillations").click()
+    page.get_by_role("button", name="Integral component").click()
+    page.get_by_role("button", name="Check answer").click()
+
+    expect(page.locator(
+        'pre:has-text("All questions are correctly answered! You may now proceed.")')).to_be_visible()
+
+    expect(page.locator('pre:has-text("Correct!")').nth(0)).to_be_visible()
+    expect(page.locator('pre:has-text("Correct!")').nth(1)).to_be_visible()
