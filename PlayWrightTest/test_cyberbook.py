@@ -84,15 +84,14 @@ def test_answering_wrong(page: Page):
     expect(page.locator('pre:has-text("Wrong answer!")').nth(0)).to_be_visible()
     expect(page.locator('pre:has-text("Wrong answer!")').nth(1)).to_be_visible()
 
-    # This is going to be changed shortly as of time of writing so can't check it now
-    # expect(page.locator(
-    #   'strong:has-text("[Will expand on wrong answer]")')).to_be_visible()
+    # Checks if additional materila expanded
+    expect(page.get_by_text("A PID controller consists of three key components")).to_be_visible()
 
 
 def test_try_again_with_new_questions(page: Page):
     """
-    Test button try again with new questions (Theese test do not really check everything, just checks
-    that check answer reapears)
+    Test button try again with new questions (These tests do not really check everything, just checks
+    that check answer reappears)
     """
     page.goto(
         "http://localhost:8000/checking_prerequisite_knowledge.html")
