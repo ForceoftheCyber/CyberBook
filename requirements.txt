@@ -10,4 +10,5 @@ ipyquizjb
 ipysim
 micropip
 
-git+https://github.com/TeachBooks/Sphinx-Thebe
+# git+https://github.com/TeachBooks/Sphinx-Thebe
+git+https://github.com/ForceoftheCyber/Sphinx-Thebe
