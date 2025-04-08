@@ -14,5 +14,6 @@ parts:
     - file: chapters/simulator/maglev_dynamical_system_simulation.ipynb
     
     - file: references.md
+    - file: chapters/test.ipynb
     # - file: changelog.md
     # - file: credits.md
