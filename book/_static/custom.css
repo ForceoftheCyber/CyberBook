@@ -1,0 +1,8 @@
+
+/*
+Force p-elements in .jupyter-widgets to use the same color as the header-elements (like the question titles).
+Could alternatively use --pst-color-text-base so it matches the static p-elements in the book.
+*/
+.jupyter-widgets p {
+    color: var(--pst-color-muted)
+}
