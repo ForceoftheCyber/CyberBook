@@ -42,6 +42,9 @@ sphinx:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
       }
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
