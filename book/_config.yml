@@ -7,7 +7,7 @@ execute:
 only_build_toc_files: true
 
 html:
-  favicon : "figures/TB_favicon.ico"
+  favicon : "figures/maggy_icon.png"
   baseurl :  "https://teachbooks.io/" #Replace this with your own URL
   extra_css:
   - custom.css
@@ -22,8 +22,8 @@ sphinx:
     html_theme_options:
       logo:
         text: Example Maglev Assignment
-        image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
-        image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
+        image_light: maggy.png # Put your logo for the light mode here (can be the same as image_dark)
+        image_dark: maggy.png # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/ForceoftheCyber/CyberBook" #add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
