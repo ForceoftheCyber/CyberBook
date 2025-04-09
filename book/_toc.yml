@@ -5,6 +5,8 @@ parts:
   - caption: PID Control
     numbered: True
     chapters:
+
+    - file: chapters/system_description.ipynb
     - file: chapters/pid_control/intro.md
       sections:
       - file: chapters/pid_control/aligning_expectations.ipynb
