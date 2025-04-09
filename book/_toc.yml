@@ -5,16 +5,10 @@ parts:
   - caption: PID Control
     numbered: True
     chapters:
-
+    - file: chapters/ilo_and_prerequisites.ipynb
+    - file: chapters/linearization_and_stability.ipynb
+    - file: chapters/controller_design.ipynb
     - file: chapters/system_description.ipynb
-    - file: chapters/pid_control/intro.md
-      sections:
-      - file: chapters/pid_control/aligning_expectations.ipynb
-      - file: chapters/pid_control/checking_prerequisite_knowledge.ipynb
-      - file: chapters/pid_control/working_towards_the_ilos_of_this_section.ipynb
-      - file: chapters/pid_control/metacognition_and_reflection.ipynb
-    - file: chapters/simulator/maglev_dynamical_system_simulation.ipynb
-    
     - file: references.md
     # - file: changelog.md
     # - file: credits.md
