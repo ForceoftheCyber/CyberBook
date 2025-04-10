@@ -12,6 +12,7 @@ parts:
     - file: chapters/equilibrium_analysis.ipynb
     - file: chapters/linearization_and_stability.ipynb
     - file: chapters/controller_design.ipynb
+    - file: chapters/robustness_and_model_validation.ipynb
     - file: references.md
     # - file: changelog.md
     # - file: credits.md
