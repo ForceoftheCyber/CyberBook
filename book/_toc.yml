@@ -7,11 +7,11 @@ parts:
     chapters:
     - file: chapters/introducing_maggy.md
     - file: chapters/ilo_and_prerequisites.ipynb
+    - file: chapters/system_description.ipynb
     - file: chapters/equilibrium_analysis.ipynb
     - file: chapters/Magnetic_levitation_history.ipynb
     - file: chapters/linearization_and_stability.ipynb
     - file: chapters/controller_design.ipynb
-    - file: chapters/system_description.ipynb
     - file: references.md
     # - file: changelog.md
     # - file: credits.md
