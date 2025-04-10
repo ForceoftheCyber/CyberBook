@@ -2,7 +2,8 @@
 
 Welcome to the Maglev Control System example assignment, hosted in this <img style="display:inline-block; height:1.5em; width:auto; transform:translate(0, -0.15em)" src="figures/logo-wide.svg" alt="Jupyter book">.
 
-This notebook includes live code, which needs to be started before you can interact with it. Note that the process may take a little time, as it initializes the environment and imports the necessary Python packages. 
+This book uses interactive questions and simulations running in the browser through *Live code* and an in-browser Python kernel.
+Note that *Live code* may take some time to start, depending on your computer, as it initializes the environment and imports the necessary Python packages. The more computation-heavy interactive animations will also take some time to load.
 
 ```{Tip}
 If live code doesn’t start automatically, you can click the <svg class="svg-inline--fa fa-rocket" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
