@@ -2,11 +2,14 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: PID Control
+  - caption: Introduction
     numbered: True
     chapters:
     - file: chapters/introducing_maggy.md
     - file: chapters/Magnetic_levitation_history.ipynb
+  - caption: Assignment
+    numbered: True
+    chapters:
     - file: chapters/ilo_and_prerequisites.ipynb
     - file: chapters/system_description.ipynb
     - file: chapters/equilibrium_analysis.ipynb
