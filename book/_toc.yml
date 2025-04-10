@@ -6,6 +6,7 @@ parts:
     numbered: True
     chapters:
     - file: chapters/ilo_and_prerequisites.ipynb
+    - file: chapters/Magnetic_levitation_history.ipynb
     - file: chapters/linearization_and_stability.ipynb
     - file: chapters/controller_design.ipynb
     - file: chapters/system_description.ipynb
