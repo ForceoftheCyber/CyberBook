@@ -27,7 +27,7 @@ sphinx:
         text: Example Maglev Assignment
         image_light: maggy.png # Put your logo for the light mode here (can be the same as image_dark)
         image_dark: maggy.png # Put your logo for the dark mode here (can be the same as image_light)
-      repository_url: "https://github.com/ForceoftheCyber/CyberBook" #add your own repo URL here
+      repository_url: "https://github.com/ForceoftheCyber/CyberBook" # add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
       use_edit_page_button: true
@@ -45,6 +45,9 @@ sphinx:
       tex: {
         inlineMath: [['$', '$'], ['\(', '\)']]
       }
+    inverter_all: false
+    html_context:
+      default_mode: "light"
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
