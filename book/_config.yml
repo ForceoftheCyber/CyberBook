@@ -19,6 +19,7 @@ sphinx:
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     - tikzjax.js  # Uses a local copy to expose the process_function
+    - remove-darkmode.js
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
@@ -27,7 +28,7 @@ sphinx:
         text: Example Maglev Assignment
         image_light: maggy.png # Put your logo for the light mode here (can be the same as image_dark)
         image_dark: maggy.png # Put your logo for the dark mode here (can be the same as image_light)
-      repository_url: "https://github.com/ForceoftheCyber/CyberBook" #add your own repo URL here
+      repository_url: "https://github.com/ForceoftheCyber/CyberBook" # add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
       use_edit_page_button: true
@@ -42,6 +43,12 @@ sphinx:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
       }
+      tex: {
+        inlineMath: [['$', '$'], ['\(', '\)']]
+      }
+    inverter_all: false
+    html_context:
+      default_mode: "light"
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches

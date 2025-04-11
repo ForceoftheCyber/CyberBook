@@ -4,5 +4,7 @@ Force p-elements in .jupyter-widgets to use the same color as the header-element
 Could alternatively use --pst-color-text-base so it matches the static p-elements in the book.
 */
 .jupyter-widgets p {
-    color: var(--pst-color-muted)
+    color: var(--pst-color-muted);
+    font-size: 16px;
+    margin-bottom: 0;
 }
