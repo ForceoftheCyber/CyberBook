@@ -6,7 +6,7 @@ parts:
     numbered: True
     chapters:
     - file: chapters/introducing_maggy.md
-    - file: chapters/Magnetic_levitation_history.ipynb
+    - file: chapters/Magnetic_levitation_history.md
   - caption: Assignment
     numbered: True
     chapters:
