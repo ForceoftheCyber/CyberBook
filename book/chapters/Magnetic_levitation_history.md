@@ -43,12 +43,12 @@ speeds of up to 607 km/h.</p>
     Kim. Magnetic levitation, volume 247.
     Springer, 2016</p>
 
-  <img src="/_static/maglev_history/transrapid.jpg" style="margin-top: 20vh">
+  <img src="../_static/maglev_history/transrapid.jpg" style="margin-top: 20vh">
   <p> Figure 4.1: The world-famousShanghai airport maglev
   train is an 08 series Tran-
   srapid [Xplore, 2024]</p>
 
-  <img src="/_static/maglev_history/chuo_shinkansen.jpg" style="margin-top: 10vh">
+  <img src="../_static/maglev_history/chuo_shinkansen.jpg" style="margin-top: 10vh">
   <p> Figure 4.2: The Ch ¯u ¯o
 Shinkansen is an electrody-
 namic maglev that is set to
@@ -71,7 +71,7 @@ already mentioned, the Transrapid is a perfect example of the for-
 mer, while electrodynamic maglevs rely somewhat on both of these
 concepts to achieve levitation.
     </p>
-  <img src="/_static/maglev_history/Suspension.png">
+  <img src="../_static/maglev_history/Suspension.png">
   <p>
   The above concepts are examples of static magnetic levitation. A
 famous theorem by Samuel Ernshaw states that it is not possible to
@@ -143,7 +143,7 @@ not be possible without magnetic confinement to guide particles/-
 plasma without physical contact.<sup>4</sup> </p>
   </div>
   <div style="flex: 1; padding: 10px; margin-top: 10vh">
-    <img src="/_static/maglev_history/planar_motors.jpg">
+    <img src="../_static/maglev_history/planar_motors.jpg">
     <p>
     Figure 4.4: An illustration of
 a planar motor developed by
@@ -159,7 +159,7 @@ motor system, 2024. <a href="https:
 motion/xplanar-planar-motor-system">URL. </a>
 Accessed: 2024-05-25
     </p>
-    <img src="/_static/maglev_history/NASA_FLOAT.jpg" style = "margin-top: 10vh">
+    <img src="../_static/maglev_history/NASA_FLOAT.jpg" style = "margin-top: 10vh">
     <p> Figure 4.5: An illustration
 of NASA’s FLOAT con-
 cept [NASA, 2024]</p>
@@ -195,7 +195,7 @@ that are capable of lifting heavy loads with a large gap between the
 levitating magnet and the base.<sup>7</sup> </p>
   </div>
   <div style="flex: 1; padding: 10px; margin-top: 0vh">
-  <img src="/_static/maglev_history/crealev_octo88.png">
+  <img src="../_static/maglev_history/crealev_octo88.png">
   <p>Figure 4.6: The Crealev Octo88
 levitation module, capable of
 lifting a load of 10 kg [Crealev,
@@ -236,7 +236,7 @@ that is not proprietary, and it is designed to be cheap enough for
 students to build themselves or bring home.</p>
   </div>
   <div style="flex: 1; padding: 10px; margin-top: 0vh">
-  <img src="/_static/maglev_history/quanser_maglev_module.jpg" style = "margin-top: 20vh">
+  <img src="../_static/maglev_history/quanser_maglev_module.jpg" style = "margin-top: 20vh">
   <p>Figure 4.7: The Quanser mag-
 netic suspension lab [Quanser,
 2024]</p>
