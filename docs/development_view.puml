@@ -1,0 +1,37 @@
+@startuml
+<style>
+    ' Style for det vi har laget
+    .External {
+        BackGroundColor DarkGrey
+    }
+</style>
+
+' Våre komponenter
+component "ipyquizjb" as ipyquiz
+component "CyberBook" as book
+component "ipysim" as maglevsim
+component "Sphinx-Thebe" as sphinx_thebe
+
+
+' Andres komponenter
+component "ipywidgets" as widgets <<External>>
+component "TeachBooks" as teachbooks <<External>>
+component "Jupyter Book" as jupyterbook <<External>>
+component "Sphinx" as sphinx <<External>>
+component "Other Sphinx extensions" as sphinx_extensions <<External>>
+
+' Piler
+book --> teachbooks
+teachbooks --> jupyterbook
+jupyterbook --> sphinx
+sphinx --> sphinx_thebe
+sphinx --> sphinx_extensions
+
+book --> ipyquiz
+ipyquiz --> widgets
+
+book --> maglevsim
+maglevsim --> widgets
+
+
+@enduml

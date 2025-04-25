@@ -1,0 +1,34 @@
+@startuml
+cloud Book
+cloud TeachBooks
+cloud JupyterBook
+
+cloud "Maglev Simulator" as maglev
+cloud ipysim
+
+cloud "Interactive Quizzes" as quiz
+cloud ipyquizjb
+
+cloud "Interactive Code" as interactive
+cloud Thebe
+cloud JupyterLite
+cloud Pyodide
+
+Book -- TeachBooks
+TeachBooks --> JupyterBook : Uses
+
+Book -- quiz
+quiz -- ipyquizjb
+Book -- interactive
+
+interactive --> Thebe
+Thebe --> JupyterLite
+JupyterLite --> Pyodide
+
+Book -- maglev
+maglev -- ipysim
+
+ipysim --> interactive : "Uses"
+ipyquizjb --> interactive : "Uses"
+
+@enduml

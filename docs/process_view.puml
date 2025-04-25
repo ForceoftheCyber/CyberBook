@@ -1,0 +1,26 @@
+@startuml
+<style>
+' Style for det vi har laget
+.External {
+    BackGroundColor DarkGrey
+}
+</style>
+
+' Internt
+package "Interactive frontend" {
+    process "IPyWidgets JavaScript frontend" as ipywidgets
+    process "Thebe code cells" as thebe
+}
+process "Pyodide Python kernel backend" as pyodide
+process "Thebe" as thebe_back
+
+' Externt
+process "FaceIT API handler" as faceit <<External>>
+
+' Arrows
+thebe_back --> pyodide : "Through JupyterLab/JupyterLite API"
+ipywidgets <--> thebe_back : "IPyWidgets comms channel\t\t"
+thebe <--> thebe_back 
+
+pyodide <-> faceit : "API fetch"
+@enduml
