@@ -12,7 +12,7 @@ This book uses the `sphinx-thebe` extension created by TeachBooks to embed live 
 TeachBooks has developed several metadata tags that you can decorate Jupyter Notebook cells with, to alter their behavior. 
 Some tags that prove useful includes:
 - `auto-execute-page`: Automatically initializes Thebe live-code on page loaded.
-- `thebe-remove-input-init`: Hides the Python code cell, while still showing the output of the execution on the page.
+- `thebe-remove-input-init`: Hides the Python code cell, while still running the cell when live coding is started and showing the output of the execution on the page.
 
 For further details on live-coding, see [the Teachbooks manual](https://teachbooks.io/manual/features/live_code.html).
 
