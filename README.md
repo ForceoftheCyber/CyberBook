@@ -14,7 +14,7 @@ Some tags that prove useful includes:
 - `auto-execute-page`: Automatically initializes Thebe live-code on page loaded.
 - `thebe-remove-input-init`: Hides the Python code cell, while still running the cell when live coding is started and showing the output of the execution on the page.
 
-For further details on live-coding, see [the Teachbooks manual](https://teachbooks.io/manual/features/live_code.html).
+For further details on live-coding, see [the TeachBooks manual](https://teachbooks.io/manual/features/live_code.html).
 
 ### Self-Assessment Quizzes
 Create interactive quizzes with the `ipyquizjb` toolkit, rendered via IPyWidgets. See [ipyquizjb](https://github.com/ForceoftheCyber/ipyquiz) for more details on usage.
@@ -55,7 +55,7 @@ This will provide you with a link to open up the built book in a browser.
 
 ### Publish your book online (GitHub Pages)
 
-This repository uses the TeachBooks Github workflow which builds and releases the book online via GitHub Pages. When you push changes to the branch, the corresponding website on GitHub will be automatically updated aswell. For more details, see the [Teachbooks manual](https://teachbooks.io/manual/external/deploy-book-workflow/README.html#gh-workflow-settings)
+This repository uses the TeachBooks Github workflow which builds and releases the book online via GitHub Pages. When you push changes to the branch, the corresponding website on GitHub will be automatically updated aswell. For more details, see the [TeachBooks manual](https://teachbooks.io/manual/external/deploy-book-workflow/README.html#gh-workflow-settings)
 
 ## Running tests
 
