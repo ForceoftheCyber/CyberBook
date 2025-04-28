@@ -17,12 +17,12 @@ Some tags that prove useful includes:
 For further details on live-coding, see [the Teachbooks manual](https://teachbooks.io/manual/features/live_code.html).
 
 ### Self-Assessment Quizzes
-Create interactive quizzes with the `ipyquizjb` toolkit, rendered via IPyWidgets. See [ipyquizjb](https://github.com/ForceoftheCyber/ipyquiz) for more details.
+Create interactive quizzes with the `ipyquizjb` toolkit, rendered via IPyWidgets. See [ipyquizjb](https://github.com/ForceoftheCyber/ipyquiz) for more details on usage.
 
 ### Dynamic simulations
-Add dynamic simulations with `ipysim`, allowing readers to adjust parameters of the simulation and receive feedback through animations, rendered via IPyWidgets. 
+Add dynamic simulations with `ipysim`, allowing readers to adjust parameters of the simulation and receive feedback through animations, rendered via IPyWidgets. See [ipysim](https://github.com/ForceoftheCyber/ipysim) for more details on usage.
 
-For more details towards expanding upon this book, please refer to [Teachbooks manual](https://teachbooks.io/manual/intro.html). See `ipysim` for more details.
+For more details towards expanding upon this book, please refer to the [TeachBooks manual](https://teachbooks.io/manual/intro.html).
 
 ## Building instructions
 
@@ -58,6 +58,8 @@ This will provide you with a link to open up the built book in a browser.
 This repository uses the TeachBooks Github workflow which builds and releases the book online via GitHub Pages. When you push changes to the branch, the corresponding website on GitHub will be automatically updated aswell. For more details, see the [Teachbooks manual](https://teachbooks.io/manual/external/deploy-book-workflow/README.html#gh-workflow-settings)
 
 ## Running tests
+
+These tests test using ipyquiz in the context of the book, and they do not have to be run when changing the content of just the book.
 
 ### Install extra requirements
 
