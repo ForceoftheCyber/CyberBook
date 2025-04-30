@@ -2,7 +2,7 @@
 
 CyberBook is a collection of open-source extensions for building interactive educational books. It is built on top of Teachbooks, which itself extends Jupyter Book.
 
-This repository serves as an example book for a [Maglev](https://github.com/Hansolini/Take-home-Maglev-lab) assignment, demonstrating how to build and customize interactive books.
+This repository serves as a book for a [Maglev](https://github.com/Hansolini/Take-home-Maglev-lab) assignment in the course TTK4111, demonstrating how to build and customize interactive books.
 
 ## Features
 

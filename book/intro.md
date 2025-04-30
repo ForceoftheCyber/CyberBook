@@ -1,4 +1,4 @@
-# Maglev Example Assignment
+# Maglev Assignment
 
 Welcome to the Maglev Control System example assignment, hosted in this <img style="display:inline-block; height:1.5em; width:auto; transform:translate(0, -0.15em)" src="figures/logo-wide.svg" alt="Jupyter book">.
 
