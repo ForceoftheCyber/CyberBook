@@ -1,32 +1,49 @@
 @startuml
+hide stereotype
+<style>
+.implementation {
+    BackgroundColor LightSkyBlue
+}
+</style>
+
 cloud Book
-cloud TeachBooks
-cloud JupyterBook
+cloud TeachBooks <<implementation>>
+cloud JupyterBook <<implementation>>
 
 cloud "Maglev Simulator" as maglev
-cloud ipysim
+cloud ipysim <<implementation>>
 
 cloud "Interactive Quizzes" as quiz
-cloud ipyquizjb
+cloud ipyquizjb <<implementation>>
+
+cloud "FaceIT" as faceit <<implementation>>
+
+cloud "Latex rendering" as latex
+cloud "MathJax" as mathjax <<implementation>>
 
 cloud "Interactive Code" as interactive
-cloud Thebe
-cloud JupyterLite
-cloud Pyodide
+cloud Thebe <<implementation>>
+cloud JupyterLite <<implementation>>
+cloud Pyodide <<implementation>>
 
-Book -- TeachBooks
-TeachBooks --> JupyterBook : Uses
+Book --> TeachBooks : "Uses"
+TeachBooks --> JupyterBook : "Uses"
 
 Book -- quiz
-quiz -- ipyquizjb
 Book -- interactive
-
-interactive --> Thebe
-Thebe --> JupyterLite
-JupyterLite --> Pyodide
-
 Book -- maglev
-maglev -- ipysim
+Book -- latex
+
+quiz ^-- ipyquizjb : "Implements"
+maglev ^-- ipysim : "Implements"
+latex ^-- mathjax : "Implements"
+ipyquizjb --> latex : "Uses"
+
+ipyquizjb --> faceit : "Uses"
+
+interactive ^-- Thebe : "Implements"
+Thebe -> JupyterLite : "Uses"
+JupyterLite -> Pyodide : "Uses"
 
 ipysim --> interactive : "Uses"
 ipyquizjb --> interactive : "Uses"

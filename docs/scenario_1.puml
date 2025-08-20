@@ -1,0 +1,24 @@
+@startuml
+hide stereotype
+<style>
+.implementation {
+    BackgroundColor LightSkyBlue
+}
+</style>
+
+cloud Book as book
+cloud "Interactive Code" as interactive
+cloud ipysim <<implementation>>
+cloud ipyquizjb <<implementation>>
+cloud "FaceIT" as faceit <<implementation>>
+
+
+book --> interactive : "(1) Start code"
+interactive -> ipyquizjb : "(2) Initialize quiz"
+ipyquizjb -> faceit : "(3) Fetch questions"
+faceit -> ipyquizjb : "(4) Return questions"
+ipyquizjb --> book : "(5) Display questions"
+interactive --> ipysim : "(6) Initialize simulator"
+book <--> ipyquizjb : "(7) Interacting with questions"
+book <--> ipysim : "(8) Interacting with simulator"
+@enduml
